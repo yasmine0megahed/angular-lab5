@@ -1,0 +1,23 @@
+<div class="card" style="width: 20rem; height: 26rem;">
+    @if(item.stock>0){
+    <div class="badge rounded-pill text-bg-success mx-5 my-2">in stock</div>
+    }@else if (item.stock==0) {
+      <div class="badge rounded-pill text-bg-danger mx-5 my-2">out of stock</div>
+    }
+     <div class="text-center pt-2"> 
+      <img class="card-img-top img-size" [src]="item.thumbnail" alt="Card image cap">
+    </div>
+      <div class="card-body">
+        <h5 class="card-title">
+          {{item.title}} 
+        </h5>
+        <div class="card-text" style="width: 18rem; height: 6rem;">{{item.description}}</div>
+        <div class="card-text my-2">{{item.price| discount :item.discountPercentage}}$ </div>
+        @if(item.stock>0){
+        <button  class="btn btn-primary mx-3 " (click)="addToArray(item)">Add To Card</button>
+        }@else if (item.stock==0) {
+          <a href="#" class="btn btn-primary mx-3 disabled">Add To Card</a>
+        }
+        <a  class="btn btn-primary mx-4" (click)="redirect(item.id)">view</a>
+      </div>
+    </div>

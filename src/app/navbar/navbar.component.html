@@ -1,0 +1,54 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo"
+          loading="lazy" />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="register" routerLinkActive="text-danger">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login" routerLinkActive="text-danger">Login</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- home -->
+      <a class=" h4 me-3" routerLink="/" routerLinkActive="text-danger" [routerLinkActiveOptions]="{exact:
+          true}">
+
+        <i class="bi bi-house-door"></i>
+      </a>
+      <!-- profile -->
+      <a class=" h4 me-3">
+        <!-- routerLink="" routerLinkActive="text-danger" [routerLinkActiveOptions]="{exact:
+    true}"
+     -->
+        <i class="bi bi-person"></i>
+      </a>
+
+      <!-- cart -->
+      <a class=" h4 me-3" routerLink="cart" routerLinkActive="text-danger">
+        <i class="bi bi-cart-plus"></i> <span class="">{{counter}}</span>
+      </a>
+
+
+
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

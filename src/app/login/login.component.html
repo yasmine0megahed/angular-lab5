@@ -1,0 +1,67 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-image" style="
+      background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+      height: 300px;
+    "></div>
+    <!-- Background image -->
+
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+      margin-top: -100px;
+      background: hsla(0, 0%, 100%, 0.8);
+      backdrop-filter: blur(30px);
+    ">
+        <div class="card-body py-5 px-md-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-5">Sign in now</h2>
+                    <form [formGroup]="loginform" (ngSubmit)="handleloginform()">
+                        <!-- start form-->
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form3Example3" class="form-control" placeholder="Email address"
+                                formControlName="loginemail" />
+                            @if (loginform.controls['loginemail'].touched&&loginform.controls['loginemail'].invalid) {
+                            <div class="form_text text-danger">
+                                @if (loginform.controls['loginemail'].errors?.['required']) {
+                                <small>this field is required</small>
+                                }
+                                @if (loginform.controls['loginemail'].errors?.['minlength']) {
+                                <small>small length</small>
+                                }
+
+                            </div>
+                            }
+                            </div>
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password" id="form3Example4" class="form-control" placeholder="Password"
+                                    formControlName="loginpassword" />
+                                @if
+                                (loginform.controls['loginpassword'].touched&&loginform.controls['loginpassword'].invalid)
+                                {
+                                <div class="form_text text-danger">
+                                    @if (loginform.controls['loginpassword'].errors?.['required']) {
+                                    <small>this field is required</small>
+                                    }
+                                    @if (loginform.controls['loginpassword'].errors?.['minlength']) {
+                                    <small>small length</small>
+                                    }
+
+                                </div>
+                                }
+                            </div>
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4">
+                                Sign in
+                            </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->

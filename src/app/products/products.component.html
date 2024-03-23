@@ -1,0 +1,13 @@
+<div class="container">
+  <!-- title -->
+  <p class="h1">products</p>
+<hr>
+<!-- all products -->
+<div class="row ">
+    @for (item of items; track $index) {
+        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+ <app-productcard [item]="item" (sendItemToParent)="reciveItemToParent($event)"></app-productcard>
+    </div>
+    }
+    </div>
+  </div>

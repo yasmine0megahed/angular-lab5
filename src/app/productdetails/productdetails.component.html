@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center my-2">
+<div class="card" style="width: 20rem; ">
+    @if(details?.stock){
+    <div class="badge rounded-pill text-bg-success mx-5 my-2">in stock</div>
+    }@else if (details?.stock) {
+      <div class="badge rounded-pill text-bg-danger mx-5 my-2">out of stock</div>
+    }
+     <div class="text-center pt-2"> 
+      <img class="card-img-top img-size" [src]="details?.thumbnail" alt="Card image cap">
+    </div>
+      <div class="card-body">
+        <h5 class="card-title">
+          {{details?.title}} 
+        </h5>
+        <div class="card-text" style="width: 18rem; height: 6rem;">{{details?.description}}</div>
+        <div class="card-text my-2">price:{{details?.price}}$ </div>
+       
+        <a href="#" class="btn btn-primary mx-3">Add To Card</a>
+      
+        <!-- <a  class="btn btn-primary mx-4" >view</a> -->
+      </div>
+    </div>
+</div>
