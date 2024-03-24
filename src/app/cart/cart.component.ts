@@ -12,10 +12,16 @@ import { parse } from 'path';
 })
 export class CartComponent {
   items: Array<productitem> = productsJason;
-  test() {
-    console.log(this.items);
-  }
+  itemCount: number = 1;
 
+  increaseCounteritem() {
+    console.log(this.itemCount); 
+    this.itemCount = this.itemCount + 1; 
+  }
+  decreaseCounteritem(){
+    console.log(this.itemCount); 
+    this.itemCount = this.itemCount - 1; 
+  }
   constructor(private counterService: CounterService) {}
   counter = 0;
   ngOnInit() {
